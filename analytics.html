@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="s_style.css">
+    <title>Analytics</title>
+    <style>
+        body {
+            padding-top: 70px; /* Adjust for the fixed navbar height */
+            position: relative;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            height: 100vh;
+            background-color: #282828;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Pseudo-element for background image with blur effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./bot.jpeg'); /* Add your background image here */
+            background-size: cover;
+            background-position: center;
+            filter: blur(4px);
+            z-index: -1; /* Ensure the image stays behind the content */
+        }
+
+        .main-content {
+                width: 400px; /* Fixed width */
+                height: 200px; /* Fixed height */
+                margin: 0 auto; /* Center horizontally */
+                padding: 40px; /* Padding inside the box */
+                border-radius: 10px; /* Rounded corners */
+                position: absolute; /* Use absolute positioning */
+                top: 50%; /* Move to the middle of the viewport */
+                left: 50%; /* Move to the middle of the viewport */
+                transform: translate(-50%, -50%); /* Center the box */
+                background: rgba(0, 0, 0, 0.806); /* Semi-transparent black overlay */
+                z-index: 1; /* Keep the content above the background */
+            }
+            
+
+        h2 {
+            color: #f6e5cf;
+        }
+
+        p {
+            color: #f6e5cf;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4a4480;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Analytics Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bot-management.html">Bot Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Robot_status.html">Robot Status</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Control_Panel.html">Control Panel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="analytics.html">Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user-management.html">User Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="maintenance.html">Maintenance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help.html">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="main-content">
+            <h2>Analytics Overview</h2>
+            <p>Analytics features coming soon!</p>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Background set to black for starry effect */
+    color: #fff; /* Text color changed to white to contrast with black background */
+    /* Removed overflow: hidden to allow scrolling */
+}
+
+
+/* Container and content styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Ensure content is above star background */
+}
+
+/* Header Styling */
+header {
+    background-color: #342275;
+    color: #ffffff;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Dropdown Styling */
+.dropdown-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 100%;
+    z-index: 2;
+}
+.dropdown-container select {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5945a0;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dropdown-container select:hover {
+    background-color: #4d3ba9;
+}
+
+/* Main Content Styling */
+.main-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    width: 100%;
+    color: #333; /* Set text color back to dark inside the box */
+    z-index: 2;
+    overflow-y: auto;
+    /* Removed max-height to allow content to grow */
+    padding-bottom: 100px; /* Extra space added to make "Thank You!" visible */
+}
+.main-content h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #5138ab;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.main-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.main-content ol, .main-content ul {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+.main-content li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Sections */
+.section {
+    margin-bottom: 40px;
+}
+
+.highlight-box, .callout {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #443382;
+    margin-bottom: 30px;
+}
+
+ 
+.thank-you-section {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #543f98;
+}
+
+  
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .dropdown-container select {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+    .main-content h2 {
+        font-size: 22px;
+    }
+    .dropdown-container {
+        justify-content: center;
+    }
+}

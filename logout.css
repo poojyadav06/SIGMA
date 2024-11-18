@@ -1,0 +1,126 @@
+/* Body and General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #190c39;
+    overflow: hidden; /* Hide scrollbars due to animation */
+    color: #ffffff;
+}
+
+/* Star effect */
+.stars {
+    width: 2px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    animation: animStar 50s linear infinite;
+    box-shadow: 1230px 180px #ffffff, 1412px 784px #ffffff, 899px 1860px #ffffff, 
+                657px 1352px #ffffff, 1350px 1191px #ffffff, 1524px 200px #ffffff, 
+                1878px 1189px #ffffff, 1446px 452px #ffffff, 133px 434px #ffffff;
+}
+
+.stars2 {
+    width: 2px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    animation: animStar 100s linear infinite;
+    box-shadow: 500px 1090px #ffffff, 1200px 140px #ffffff, 456px 780px #ffffff, 
+                1300px 560px #ffffff, 110px 400px #ffffff, 960px 210px #ffffff, 
+                680px 980px #ffffff, 1590px 1220px #ffffff, 1280px 330px #ffffff;
+}
+
+.stars3 {
+    width: 2px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    animation: animStar 150s linear infinite;
+    box-shadow: 1420px 690px #ffffff, 1330px 850px #ffffff, 240px 470px #ffffff, 
+                930px 1290px #ffffff, 1380px 380px #ffffff, 750px 970px #ffffff, 
+                1080px 60px #ffffff, 840px 1350px #ffffff, 670px 510px #ffffff;
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+
+.logout-container {
+    z-index: 2;
+    background-color: rgba(191, 191, 216, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+}
+
+.logout-container h1 {
+    color: #333;
+    font-size: 28px;
+    margin: 0;
+}
+
+.logout-container p {
+    color: #555;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.logout-container a {
+    color: #050214;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid #4e437a;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-container a:hover {
+    background-color: #604f9d;
+    color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logout-container {
+        padding: 30px;
+        width: 85%;
+    }
+
+    .logout-container h1 {
+        font-size: 24px;
+    }
+
+    .logout-container p, .logout-container a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logout-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .logout-container h1 {
+        font-size: 20px;
+    }
+
+    .logout-container p, .logout-container a {
+        font-size: 14px;
+    }
+}

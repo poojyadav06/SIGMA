@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://media.istockphoto.com/id/1082233440/photo/abstract-background-cover-intro.webp?b=1&s=170667a&w=0&k=20&c=nfuf8z-PVuE05fSDeFjW2BGI3_K0H_H8NbozC58XzlY='); /* Background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+            
+        .login-container {
+            max-width: 350px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(72, 52, 135, 0.866);
+            text-align: center;
+            transition: all 0.3s ease; /* Transition effect */
+        }
+        
+        .login-container:hover {
+            transform: scale(1.05); /* Enlarge on hover */
+            box-shadow: 0 8px 16px rgba(35, 19, 78, 0.866);
+        }
+        
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px); /* Adjust width for padding */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            color: #fff;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            width: 60%;
+            padding: 13px;
+            background-color: #2f1d5b;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transition effect */
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #201646; /* Darker background on hover */
+        }
+       
+        h2 {
+            color: #d59b9b;
+            margin-bottom: 20px;
+        }
+        
+        .heading {
+            font-size: 2em;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #fff; /* Change to a visible color */
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .register-link {
+            color: #9d72de;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease; /* Transition effect */
+        }
+        
+        .register-link:hover {
+            color: #bb50dc; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="data:image/png;base64,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" alt="NIIT UNIVERSITY Logo">
+        <h2 class="heading">Login</h2>
+        <form action="/login" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your username">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+            
+            <input type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="/register" class="register-link">Register here</a></p>
+    </div>
+</body>
+</html>

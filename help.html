@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Help</title>
+    <style>
+        html, body {
+            height: 100%; /* Ensure the body and html elements take up the full height of the viewport */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding-top: 70px; /* Add padding to prevent content from being hidden behind the fixed navbar */
+            position: relative; /* For pseudo-element positioning */
+            z-index: 1; /* Ensure content is above the background */
+            color: white; /* Ensure text is readable */
+        }
+
+        /* Blurred background image */
+        body::before {
+            content: '';
+            position: fixed; /* Fixed position ensures the image stays in place while scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./bot.jpeg'); /* Set your background image here */
+            background-size: cover;
+            background-position: center;
+            filter: blur(6px); /* Apply blur effect */
+            z-index: -1; /* Ensure the background stays behind the content */
+        }
+
+        /* Overlay to make the content more readable over the background */
+        main {
+            width: 400px; /* Fixed width */
+            height: 200px; /* Fixed height */
+            margin: 0 auto; /* Center horizontally */
+            padding: 40px; /* Padding inside the box */
+            border-radius: 10px; /* Rounded corners */
+            position: absolute; /* Use absolute positioning */
+            top: 50%; /* Move to the middle of the viewport */
+            left: 50%; /* Move to the middle of the viewport */
+            transform: translate(-50%, -50%); /* Center the box */
+            background: rgba(0, 0, 0, 0.806); /* Semi-transparent black overlay */
+            z-index: 1; /* Keep the content above the background */
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4a4480;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Help Center</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bot-management.html">Bot Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gesture-control.html">Gesture Control</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analytics.html">Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user-management.html">User Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="maintainance.html">Maintenance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="help.html">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-4">
+        <section class="text-center">
+            <h2>Help Section</h2>
+            <p>Help resources coming soon!</p>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
